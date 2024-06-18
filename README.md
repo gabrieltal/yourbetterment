@@ -14,14 +14,13 @@ The page will reload when you make changes. You may also see any lint errors in 
 
 ### Deployment
 
-Build the app for production to the `build` folder by running `npm run build`.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To deploy run `npm run deploy`.
+
+Your app will deploy to [https://gabrieltal.github.io/yourbetterment](https://gabrieltal.github.io/yourbetterment)
+
+To build the app for production to the build folder, run `npm run build`. It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.
-
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### Tests
 
