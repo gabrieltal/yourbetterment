@@ -1,4 +1,4 @@
-# Your Betterment
+# For your betterment
 
 Image editing React playground. Just trying something.
 
