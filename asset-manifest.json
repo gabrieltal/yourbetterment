@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yourbetterment/static/css/main.e6c13ad2.css",
+    "main.js": "/yourbetterment/static/js/main.3e4075b1.js",
+    "static/js/453.47e9fea5.chunk.js": "/yourbetterment/static/js/453.47e9fea5.chunk.js",
+    "index.html": "/yourbetterment/index.html",
+    "main.e6c13ad2.css.map": "/yourbetterment/static/css/main.e6c13ad2.css.map",
+    "main.3e4075b1.js.map": "/yourbetterment/static/js/main.3e4075b1.js.map",
+    "453.47e9fea5.chunk.js.map": "/yourbetterment/static/js/453.47e9fea5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3e4075b1.js"
+  ]
+}
