@@ -1,6 +1,6 @@
 # Your Betterment
 
-Create your own Betterment logo. Using Betterment's logo shape style guide.
+Image editing React playground. Just trying something.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
