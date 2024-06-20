@@ -18,7 +18,7 @@ export default function App() {
       <main>
         <h1>Work in progress</h1>
         <input type="file" onChange={handleChange} />
-        { 
+        {
           files.map ((fileObject, index) => {
             return <File key={index} file={fileObject} isSelected={selected == fileObject} setSelected={() => setSelected(fileObject)} />;
           })
