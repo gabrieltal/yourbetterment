@@ -5,6 +5,7 @@ import File from './components/File';
 
 export default function App() {
   const [files, setFiles] = useState([]);
+  const [selected, setSelected] = useState(null);
 
   function handleChange(e) {
     const file = URL.createObjectURL(e.target.files[0]);
@@ -19,7 +20,7 @@ export default function App() {
         <input type="file" onChange={handleChange} />
         { 
           files.map ((fileObject, index) => {
-            return <File key={index} file={fileObject} />;
+            return <File key={index} file={fileObject} isSelected={selected == fileObject} setSelected={() => setSelected(fileObject)} />;
           })
         }
       </main>
