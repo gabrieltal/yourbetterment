@@ -17,7 +17,7 @@ export default function App() {
         left: rectangle.left,
       });
     }
-  }, [bettermentShapeRef.current])
+  }, []);
 
   function handleChange(e) {
     const file = URL.createObjectURL(e.target.files[0]);
@@ -38,7 +38,7 @@ export default function App() {
               return (
                 <File key={index}
                       file={fileObject}
-                      isSelected={selected == fileObject}
+                      isSelected={selected === fileObject}
                       setSelected={() => setSelected(fileObject)}
                       bettermentShape={bettermentShape} />
               );

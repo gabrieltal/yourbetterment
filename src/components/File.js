@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function File({ file, isSelected, setSelected, bettermentShape }) {
   const className = isSelected ? 'selected image' : 'image';
@@ -16,5 +16,5 @@ export default function File({ file, isSelected, setSelected, bettermentShape })
     return false;
   }
 
-  return (<img src={file} className={className} onClick={setSelected} draggable={isSelected} onDragEnd={handleDrop} />);
+  return (<img src={file} alt="idk, you uploaded this" className={className} onClick={setSelected} draggable={isSelected} onDragEnd={handleDrop} />);
 };
