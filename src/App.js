@@ -22,13 +22,14 @@ export default function App() {
   function handleChange(e) {
     const file = URL.createObjectURL(e.target.files[0]);
     setFiles([...files, file]);
+    setSelected(null);
     e.target.value = null;
   }
 
   return (
     <div className="mainContent">
       <header>
-        <h1>Work in progress</h1>
+        <h1>Your betterment</h1>
         <input type="file" onChange={handleChange} />
       </header>
       <main>
