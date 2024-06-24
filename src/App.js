@@ -41,7 +41,8 @@ export default function App() {
                       file={fileObject}
                       isSelected={selected === fileObject}
                       setSelected={() => setSelected(fileObject)}
-                      bettermentShape={bettermentShape} />
+                      bettermentShape={bettermentShape}
+                      removeSelected={() => setSelected(null)} />
               );
             })
           }

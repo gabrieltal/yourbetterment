@@ -27,3 +27,8 @@ main, header { margin-bottom: 2rem; }
   height: 300px;
   border: 1px solid black;
 }
+
+.fileEditTools {
+  display: flex;
+  align-items: center;
+}
