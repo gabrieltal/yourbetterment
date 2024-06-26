@@ -30,25 +30,28 @@ export default function App() {
     <div className="mainContent">
       <header>
         <h1>Your betterment</h1>
-        <input type="file" onChange={handleChange} />
       </header>
-      <main className="bettermentShapeContainer">
-        <div className="bettermentShape" ref={bettermentShapeRef}>
-          {
-            files.map ((fileObject, index) => {
-              return (
-                <File key={index}
-                      file={fileObject}
-                      isSelected={selected === fileObject}
-                      setSelected={() => setSelected(fileObject)}
-                      bettermentShape={bettermentShape}
-                      removeSelected={() => setSelected(null)} />
-              );
-            })
-          }
+      <main>
+        <div className="bettermentShapeContainer">
+          <div className="bettermentShape" ref={bettermentShapeRef}>
+            {
+              files.map ((fileObject, index) => {
+                return (
+                  <File key={index}
+                        file={fileObject}
+                        isSelected={selected === fileObject}
+                        setSelected={() => setSelected(fileObject)}
+                        bettermentShape={bettermentShape}
+                        removeSelected={() => setSelected(null)} />
+                );
+              })
+            }
+          </div>
+          <div className="bettermentShapeHelper shapeHelperOne"></div>
+          <div className="bettermentShapeHelper shapeHelperTwo"></div>
         </div>
-        <div className="bettermentShapeHelper shapeHelperOne"></div>
-        <div className="bettermentShapeHelper shapeHelperTwo"></div>
+
+        <input type="file" onChange={handleChange} />
       </main>
     </div>
   );

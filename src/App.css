@@ -11,10 +11,24 @@ body { background-color: #ffc729; }
 
 main, header { margin-bottom: 2rem; }
 
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .selected {
   border: 2px solid black;
 
   &:hover { cursor: pointer; }
+}
+
+input[type="file"] {
+  z-index: 10000;
+  width: 200px;
+  display: flex;
+  position: sticky;
+  margin: auto;
 }
 
 .image {
@@ -26,12 +40,14 @@ main, header { margin-bottom: 2rem; }
 
 .bettermentShapeContainer {
   position: relative;
+  width: 500px;
+  height: 500px;
 }
 
 .bettermentShape {
   overflow: hidden;
   position: absolute;
-  left: -250px;
+  left: 0;
   width: 500px;
   height: 500px;
   border: 2px solid black;
@@ -46,15 +62,15 @@ main, header { margin-bottom: 2rem; }
 }
 
 .shapeHelperOne {
-  top: 348.75px;
-  left: -49.25px;
+  top: 349px;
+  left: 200px;
   position: absolute;
   transform: rotate(23deg);
 }
 
 .shapeHelperTwo {
-  top: 348.75px;
-  left: -166.25px;
+  top: 349px;
+  left: 84px;
   position: absolute;
   transform: rotate(337deg);
 }
