@@ -1,3 +1,5 @@
+body { background-color: #ffc729; }
+
 .mainContent {
   display: flex;
   flex-direction: column;
@@ -23,9 +25,33 @@ main, header { margin-bottom: 2rem; }
 
 .bettermentShape {
   position: relative;
-  width: 100%;
-  height: 300px;
-  border: 1px solid black;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.bettermentShapeHelper {
+  background-color: #ffc729;
+  height: 206px;
+  width: 206px;
+  z-index: 10000;
+  border-top: 2px solid black;
+}
+
+.shapeHelperOne {
+  top: 519px;
+  left: 219px;
+  position: absolute;
+  transform: rotate(23deg);
+}
+
+.shapeHelperTwo {
+  top: 519.25px;
+  left: 110.75px;
+  position: absolute;
+  transform: rotate(337deg);
 }
 
 .fileEditTools {

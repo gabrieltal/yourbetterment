@@ -32,8 +32,8 @@ export default function App() {
         <h1>Your betterment</h1>
         <input type="file" onChange={handleChange} />
       </header>
-      <main>
-        <div className="bettermentShape" ref={bettermentShapeRef}>
+      <main ref={bettermentShapeRef}>
+        <div className="bettermentShape">
           {
             files.map ((fileObject, index) => {
               return (
@@ -47,6 +47,8 @@ export default function App() {
             })
           }
         </div>
+        <div className="bettermentShapeHelper shapeHelperOne"></div>
+        <div className="bettermentShapeHelper shapeHelperTwo"></div>
       </main>
     </div>
   );
