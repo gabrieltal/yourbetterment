@@ -2,6 +2,7 @@
 .mb-2 { margin-bottom: 2rem; }
 .m-auto { margin: auto; }
 .p-1 { padding: 1rem; }
+.ml-xs { margin-left: .5rem; }
 
 /* Display */
 .overflowVisible { overflow: visible !important; }
@@ -17,6 +18,7 @@
 .selected {
   border: 2px solid black;
   z-index: 10000;
+  opacity: 0.75;
 
   &:hover { cursor: pointer; }
 }
@@ -27,11 +29,15 @@ input[type="file"] {
   position: sticky;
 }
 
+input[type="numeric"] {
+  width: 40px;
+}
+
 .image {
   position: absolute;
   top: 10rem;
   left: 10rem;
-  max-height: 500px;
+  max-height: 1000px;
 }
 
 /* Betterment shape styling */

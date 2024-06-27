@@ -10,14 +10,12 @@ export default function App() {
   const bettermentShapeRef = useRef(null);
 
   useEffect(() => {
-    if (bettermentShapeRef.current !== null) {
-      const rectangle = bettermentShapeRef.current.getBoundingClientRect();
-      setBettermentShape({
-        top: rectangle.top,
-        left: rectangle.left,
-      });
-    }
-  }, []);
+    const rectangle = bettermentShapeRef.current.getBoundingClientRect();
+    setBettermentShape({
+      top: rectangle.top,
+      left: rectangle.left,
+    });
+  }, [bettermentShapeRef.current]);
 
   function handleFileUpload(e) {
     const file = URL.createObjectURL(e.target.files[0]);
