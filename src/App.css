@@ -1,24 +1,22 @@
-body { background-color: #ffc729; }
+/* Margin and padding */
+.mb-2 { margin-bottom: 2rem; }
+.m-auto { margin: auto; }
+.p-1 { padding: 1rem; }
 
-.mainContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  padding: 1rem;
-}
+/* Display */
+.overflowVisible { overflow: visible !important; }
+.displayFlex { display: flex; }
+.flexColumn { flex-direction: column; }
+.alignItemsCenter { align-items: center; }
 
-main, header { margin-bottom: 2rem; }
+/* Utilities */
+.bg-betterment { background-color: #ffc729; }
+.maxHeight { height: 100vh; }
 
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
+/* File upload and file display */
 .selected {
   border: 2px solid black;
+  z-index: 10000;
 
   &:hover { cursor: pointer; }
 }
@@ -26,9 +24,7 @@ main {
 input[type="file"] {
   z-index: 10000;
   width: 200px;
-  display: flex;
   position: sticky;
-  margin: auto;
 }
 
 .image {
@@ -37,6 +33,8 @@ input[type="file"] {
   left: 10rem;
   max-height: 500px;
 }
+
+/* Betterment shape styling */
 
 .bettermentShapeContainer {
   position: relative;
@@ -56,26 +54,20 @@ input[type="file"] {
 
 .bettermentShapeHelper {
   background-color: #ffc729;
+  position: absolute;
   height: 220px;
   width: 220px;
   border-top: 2px solid black;
 }
 
-.shapeHelperOne {
+.shapeHelperLeft{
   top: 349px;
   left: 200px;
-  position: absolute;
   transform: rotate(23deg);
 }
 
-.shapeHelperTwo {
+.shapeHelperRight {
   top: 349px;
   left: 84px;
-  position: absolute;
   transform: rotate(337deg);
-}
-
-.fileEditTools {
-  display: flex;
-  align-items: center;
 }

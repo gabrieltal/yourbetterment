@@ -19,7 +19,7 @@ export default function App() {
     }
   }, []);
 
-  function handleChange(e) {
+  function handleFileUpload(e) {
     const file = URL.createObjectURL(e.target.files[0]);
     setFiles([...files, file]);
     setSelected(null);
@@ -27,13 +27,13 @@ export default function App() {
   }
 
   return (
-    <div className="mainContent">
-      <header>
+    <div className="displayFlex alignItemsCenter flexColumn p-1 maxHeight">
+      <header className="mb-2">
         <h1>Your betterment</h1>
       </header>
-      <main>
+      <main className="displayFlex alignItemsCenter flexColumn mb-2">
         <div className="bettermentShapeContainer">
-          <div className="bettermentShape" ref={bettermentShapeRef}>
+          <div className={selected ? 'bettermentShape overflowVisible' : 'bettermentShape'} ref={bettermentShapeRef}>
             {
               files.map ((fileObject, index) => {
                 return (
@@ -47,11 +47,11 @@ export default function App() {
               })
             }
           </div>
-          <div className="bettermentShapeHelper shapeHelperOne"></div>
-          <div className="bettermentShapeHelper shapeHelperTwo"></div>
+          <div className={selected ? 'bettermentShapeHelper shapeHelperLeft overflowVisible' : 'bettermentShapeHelper shapeHelperLeft' }></div>
+          <div className={selected ? 'bettermentShapeHelper shapeHelperRight overflowVisible' : 'bettermentShapeHelper shapeHelperRight' }></div>
         </div>
 
-        <input type="file" onChange={handleChange} />
+        <input className="displayFlex m-auto" type="file" onChange={handleFileUpload} />
       </main>
     </div>
   );

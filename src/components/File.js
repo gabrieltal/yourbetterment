@@ -1,8 +1,6 @@
 import React from "react";
 
 export default function File({ file, isSelected, setSelected, bettermentShape, removeSelected }) {
-  const className = isSelected ? 'selected image' : 'image';
-
   function handleDrop(e) {
     const fileCenterX = e.target.width / 2;
     const fileCenterY = e.target.height / 2;
@@ -16,11 +14,11 @@ export default function File({ file, isSelected, setSelected, bettermentShape, r
   }
 
   return (
-    <div className={className} draggable={isSelected} onDragEnd={handleDrop}>
+    <div className={isSelected ? 'selected image' : 'image'} draggable={isSelected} onDragEnd={handleDrop}>
       <img onClick={setSelected} src={file} alt="idk, you uploaded this"/>
       {
         isSelected &&
-          <div className="fileEditTools">
+          <div className="displayFlex alignItemsCenter">
             <button onClick={removeSelected}>Deselect</button>
           </div>
       }
