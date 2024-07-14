@@ -33,11 +33,14 @@ input[type="numeric"] {
   width: 40px;
 }
 
-.image {
+.imageContainer {
   position: absolute;
   top: 10rem;
   left: 10rem;
-  max-height: 1000px;
+
+  img {
+    max-height: 600px;
+  }
 }
 
 /* Betterment shape styling */

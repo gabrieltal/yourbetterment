@@ -34,7 +34,7 @@ export default function File({ file, isSelected, setSelected, bettermentShape, r
   }
 
   return (
-    <div className={isSelected ? 'selected image' : 'image'} draggable={isSelected} onDragEnd={handleDrop}>
+    <div className={isSelected ? 'selected imageContainer' : 'imageContainer'} draggable={isSelected} onDragEnd={handleDrop}>
       <img onClick={setSelected} src={file} alt="idk, you uploaded this" ref={fileRef} />
       {
         isSelected &&
