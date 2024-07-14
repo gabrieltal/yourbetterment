@@ -2,23 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 
 
 export default function File({ file, isSelected, setSelected, bettermentShape, removeSelected }) {
-  const [height, setHeight] = useState(0);
-  const [width, setWidth] = useState(0);
+  const [originalHeight, setOriginalHeight] = useState(0);
+  const [originalWidth, setOriginalWidth] = useState(0);
+  const [size, setSize] = useState(1);
   const fileRef = useRef(null);
 
   useEffect(() => {
-    setHeight(fileRef.current.height);
-    setWidth(fileRef.current.width);
+    setOriginalHeight(fileRef.current.height);
+    setOriginalWidth(fileRef.current.width);
   }, [fileRef.current]);
 
-  function handleHeightChange(e) {
-    fileRef.current.height = e.target.value;
-    setHeight(e.target.value);
-  }
-
-  function handleWidthChange(e) {
-    fileRef.current.width = e.target.value;
-    setWidth(e.target.value);
+  function handleSizeChange(e) {
+    fileRef.current.height = originalHeight * e.target.value;
+    fileRef.current.width = originalWidth * e.target.value;
+    setSize(e.target.value);
   }
 
   function handleDrop(e) {
@@ -40,14 +37,10 @@ export default function File({ file, isSelected, setSelected, bettermentShape, r
         isSelected &&
           <div className="displayFlex alignItemsCenter justifyContentBetween">
             <button onClick={removeSelected}>Deselect</button>
-            <div className="ml-xs displayFlex">
-              <label for="height">Height: </label>
-              <input name="height" type="numeric" value={height} onChange={handleHeightChange} />
-            </div>
 
             <div className="ml-xs displayFlex">
-              <label for="width">Width: </label>
-              <input name="width" type="numeric" value={width} onChange={handleWidthChange} />
+              <label for="size">Size: </label>
+              <input name="size" type="number" min="0.1" step="0.1" value={size} max="10" onChange={handleSizeChange} />
             </div>
           </div>
       }
