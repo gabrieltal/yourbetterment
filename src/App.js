@@ -31,6 +31,7 @@ export default function App() {
       </header>
       <main className="displayFlex alignItemsCenter flexColumn mb-2">
         <div className="bettermentShapeContainer">
+          {selected && <div className="backgroundModalGrey" onClick={() => setSelected(null)}></div>}
           <div className={selected ? 'bettermentShape overflowVisible' : 'bettermentShape'} ref={bettermentShapeRef}>
             {
               files.map ((fileObject, index) => {

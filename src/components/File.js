@@ -39,7 +39,7 @@ export default function File({ file, isSelected, setSelected, bettermentShape, r
             <button onClick={removeSelected}>Deselect</button>
 
             <div className="ml-xs displayFlex">
-              <label for="size">Size: </label>
+              <label htmlFor="size">Size: </label>
               <input name="size" type="number" min="0.1" step="0.1" value={size} max="10" onChange={handleSizeChange} />
             </div>
           </div>
