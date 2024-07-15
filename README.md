@@ -28,9 +28,9 @@ Run `npm test` to launch the test runner in the interactive watch mode. See the 
 
 ### Todo list
 
-[] Make it better to adjust the position of the image, it isn't pleasant right now.
-[] Maybe make the drag-and-drop better, like the image follows the cursor, if possible.
-[] Make the resizing cuter.
-[] Figure out if I can make it easy to save the image? Maybe need to do a canvas? IDK. Or maybe a button that lets you screenshot and ask if we can store it? I really don't know here. Gotta research if my vision is possible at all.
-[] Clean up CSS
-[] Clean up JS
+[ ] Make it better to adjust the position of the image, it isn't pleasant right now.
+[ ] Maybe make the drag-and-drop better, like the image follows the cursor, if possible.
+[ ] Make the resizing cuter.
+[ ] Figure out if I can make it easy to save the image? Maybe need to do a canvas? IDK. Or maybe a button that lets you screenshot and ask if we can store it? I really don't know here. Gotta research if my vision is possible at all.
+[ ] Clean up CSS
+[ ] Clean up JS
